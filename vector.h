@@ -46,8 +46,10 @@ int vec_dot(vector2 a, vector2 b) {
 }//if dot product between camera vector and normal vector,
 //you can find out whether it needs to be rendered.
 //result > 0  angle is less than 90
+// means that vector b is in front of vector a
 // need to be rendered
 //result < 0, angel is more then 90 
+// means that vector b is behind of vector a
 // doesn't need to be rendered
 
 
