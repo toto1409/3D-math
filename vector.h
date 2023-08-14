@@ -3,6 +3,11 @@ struct vector2 {
     int x =0;
     int y =0;
 };
+class vector3 {       // The class
+public:             // Access specifier
+    int x,y,z;        // Attribute (int variable)
+     // Attribute (string variable)
+};
 vector2 vec_add(vector2 a, vector2 b)
 {
     vector2 temp1;
@@ -52,7 +57,13 @@ int vec_dot(vector2 a, vector2 b) {
 // means that vector b is behind of vector a
 // doesn't need to be rendered
 
-
+vector3 vector_cross(vector3 a, vector3 b)
+{
+    return new vector3(
+        a.y * b.z - a.z * b.y,
+        a.z * b.x - a.x * b.z,
+        a.x * b.y - a.y * b.x);
+}
 
 // reflect = p + 2n(-p∙n)
 //Vector3 reflect = velocity + 2 * normal * Vector3.Dot(-velocity, normal);
